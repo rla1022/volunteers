@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+
+{% block head_title %} Add Hours || {{block.super}}{% endblock head_title %}
+
+{% block content %}
+
+{{request.user}}
+<h1>Add Hours</h1>
+<h1>
+	<form method="POST"> {% csrf_token %}
+	{{form.as_p}}
+	<button type='submit'>Save</button>
+	</form>
+</h1>
+
+{% endblock %}

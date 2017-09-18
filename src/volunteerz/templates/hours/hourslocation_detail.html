@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head_title %} Hours || {{block.super}}{% endblock head_title %}
+
+{% block content %}
+<h1>Hours Details</h1>
+<h1>
+{{object.title}}
+{{object.OpportunityNumber}}
+<p>{{object.ChildsName}}</p>
+<p>{{object.location}}</p>
+<p>{{object.my_date_field}}</p>
+<p>{{object.timestamp}}</p>
+<p>last updated {{object.updated|timesince}}</p>
+</h1>
+
+{% endblock %}
